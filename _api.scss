@@ -3,6 +3,25 @@
 
 $utilities : (
 
+//-------------------start:: flex ----------------- //
+  "space-evenly":(
+    property: align-content,
+    class: align-content,
+    responsive: true,
+    values:(
+        space-evenly: space-evenly,
+    )
+  ),
+
+  "align-self":(
+    property: align-self,
+    class: align-self,
+    responsive: true,
+    values:(
+        auto: auto,
+    )
+  ),
+//-------------------end:: flex ----------------- //
 
 //-------------------start:: all ----------------- //
  "all":(
