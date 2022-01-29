@@ -1,0 +1,42 @@
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+$primary: #0d6efd;
+$white:#fff;
+$secondary:#6c757d;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+$transparent: transparent;
+
+$caret-color :(
+  primary: $primary,
+  secondary: $secondary,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  transparent: $transparent,
+);
+
+
+
+
+
+
+
+
+
+
+
+

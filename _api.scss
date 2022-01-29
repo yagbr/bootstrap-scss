@@ -1,0 +1,839 @@
+@import "../api/var";
+@import "../api/maping";
+
+$utilities : (
+
+//-------------------start:: flex ----------------- //
+  "space-evenly":(
+    property: align-content,
+    class: align-content,
+    responsive: true,
+    values:(
+        space-evenly: space-evenly,
+    )
+  ),
+
+  "align-self":(
+    property: align-self,
+    class: align-self,
+    responsive: true,
+    values:(
+        auto: auto,
+    )
+  ),
+//-------------------end:: flex ----------------- //
+
+//-------------------start:: all ----------------- //
+ "all":(
+    property: all,
+    class: all,
+    responsive: true,
+    values:(
+        inherit: inherit,
+        initial: initial,
+        unset: unset,
+    )
+ ),  
+//-------------------end:: all ----------------- //
+
+//-------------------start:: animation ----------------- //
+"animation-delay":(
+    property: animation-delay,
+    class: ani-delay,
+    responsive: true,
+    values: map-merge($ani-transition-delay, ())
+),
+
+"animation-direction":(
+    property: animation-direction,
+    class: ani-direction,
+    responsive: true,
+    values: map-merge($ani-direction, ())
+   
+),
+
+"animation-duration":(
+    property: animation-duration,
+    class: ani-duration,
+    responsive: true,
+    values: map-merge($ani-transition-duration, ())
+),
+
+"animation-fill-mode":(
+    property: animation-fill-mode,
+    class: ani-fill-mode,
+    responsive: true,
+    values: map-merge($ani-fill-mode, ())
+),
+
+"animation-iteration-count":(
+    property: animation-iteration-count,
+    class: ani-iteration-count,
+    responsive: true,
+    values: map-merge($ani-iteration-count, (infinite: infinite))
+),
+
+"animation-play-state":(
+    property: animation-play-state,
+    class: animation-play-state,
+    responsive: true,
+    values:(
+        paused: paused,
+        running: running,
+    )
+),
+
+"animation-timing-function":(
+    property: animation-timing-function,
+    class: ani-timing-function,
+    responsive: true,
+    values: map-merge($timing-function, ())
+),
+
+//-------------------end:: animation ----------------- //
+
+//-------------------start:: backgound ----------------- //
+    "background-repeat":(
+        property:  background-repeat,
+        class: bg-repeat,
+        responsive: true,
+        values: (
+            no-repeat: no-repeat,
+            repeat-x: repeat-x,
+            repeat-y: repeat-y,
+        )
+    ),
+
+    "background-attachment":(
+        property:  background-attachment,
+        class: bg-attachment,
+        responsive: true,
+        values: (
+            scroll: scroll,
+            fixed: fixed,
+        )
+    ),
+
+    "background-clip":(
+        property: background-clip,
+        class: bg-clip,
+        responsive: true,
+        values: map-merge($bg-clip-origin, (initial: initial))
+    ),
+
+    "background-origin":(
+        property: background-origin,
+        class: bg-origin,
+        responsive: true,
+        values: map-merge($bg-clip-origin, (initial: initial))
+    ),
+
+    "background-position":(
+        property: background-position,
+        class: bg-position,
+        responsive: true,
+        values: map-merge($bg-position, (initial: initial))
+    ),
+
+    "background-size":(
+        property: background-size,
+        class: bg-size,
+        responsive: true,
+        values: map-merge($bg-size, (initial: initial))
+    ),
+
+    "background-blend-mode":(
+        property: background-blend-mode,
+        class: bg-blend-mode,
+        responsive: true,
+        values: map-merge($bg-blend-mode, ())
+    ),
+
+//------------------- end:: backgound ----------------- //
+
+//-------------------start:: border ----------------- //
+    "border-width":(
+        property: border-width,
+        class: border-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "border-bottom-width":(
+        property: border-bottom-width,
+        class: border-bottom-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "border-top-width":(
+        property: border-top-width,
+        class: border-top-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "border-left-width":(
+        property: border-left-width,
+        class: border-left-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "border-right-width":(
+        property: border-right-width,
+        class: border-right-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "border-style":(
+        property: border-style,
+        class: border-style,
+        responsive: true,
+        values: map-merge($border-style, (initial: initial))
+    ),
+
+    "border-bottom-style":(
+        property: border-bottom-style,
+        class: border-bottom-style,
+        responsive: true,
+        values: map-merge($border-style, (initial: initial))
+    ),
+
+    "border-left-style":(
+        property: border-left-style,
+        class: border-left-style,
+        responsive: true,
+        values: map-merge($border-style, (initial: initial))
+    ),
+
+    "border-right-style":(
+        property: border-right-style,
+        class: border-right-style,
+        responsive: true,
+        values: map-merge($border-style, (initial: initial))
+    ),
+
+    "border-top-style":(
+        property: border-top-style,
+        class: border-top-style,
+        responsive: true,
+        values: map-merge($border-style, (initial: initial))
+    ),
+
+    "border-collapse":(
+         property: border-collapse,
+         class: border-collapse,
+         responsive: true,
+         values:(
+            separate: separate,
+         )
+    ),
+
+    "border-color":(
+        property: border-color,
+        class: border-color,
+        responsive: true,
+        values:(
+            transparent: transparent,
+            initial: initial,
+        )
+    ),
+
+    "border-image-outset":(
+        property: border-image-outset,
+        class: border-image-outset,
+        responsive: true,
+        values:(
+           initial: initial,
+        )
+    ),
+
+    "border-image-repeat":(
+        property: border-image-repeat,
+        class: border-image-repeat,
+        responsive: true,
+        values: map-merge($border-image-repeat, (initial: initial))
+    ),
+
+    "border-image-width":(
+        property: border-image-width,
+        class: border-image-width,
+        responsive: true,
+        values:(
+            auto: auto,
+            initial: initial,
+        )
+    ),
+
+
+//-------------------end:: border ----------------- //
+
+    "box-decoration-break":(
+        property: box-decoration-break,
+        class: box-decoration-break,
+        responsive: true,
+        values:(
+            clone:clone,
+            slice: slice,
+        )
+    ),
+
+    "caption-side":(
+        property: caption-side,
+        class: caption,
+        responsive: true,
+        values:(
+            bottom: bottom,
+            initial: initial,
+        )
+    ),
+
+    "caret-color":(
+        property: caret-color,
+        class: caret-color,
+        responsive: true,
+        values:map-merge($caret-color,("white": $white)),
+    ),
+
+    "clip":(
+        property: clip,
+        class: clip,
+        values:(
+            auto: auto,
+        )
+    ),
+
+    "clear":(
+        property: clear,
+        class: clear,
+        responsive: true,
+        values:map-merge($clear,(initial: initial)),
+    ),
+
+    "direction":(
+        property: direction,
+        class: direction,
+        responsive: true,
+        values:(
+            ltr: ltr,
+            rtl: rtl,
+            inherit: inherit
+        )
+    ),
+
+    "hyphens":(
+        property: hyphens,
+        class: hyphens,
+        responsive: true,
+        values:(
+            none: none,
+            manual: manual,
+            auto: auto
+        )
+    ),
+
+    "image-rendering":(
+        property: image-rendering,
+        class: img-rendering,
+        responsive: true,
+        values: map-merge($img-rendering,(initial: initial)),
+    ),
+
+    "isolation":(
+        property: isolation,
+        class: isolation,
+        responsive: true,
+        values:(
+            auto: auto,
+            isolate: isolate
+        )
+    ),
+
+    "object-fit":(
+        property: object-fit,
+        class: object-fit,
+        responsive: true,
+        values: map-merge($object-fit, (initial: initial))
+    ),
+
+    "perspective-origin":(
+        property: perspective-origin,
+        class: perspective-origin,
+        responsive: true,
+        values: map-merge($perspective-origin, (initial: initial))
+    ),
+
+    "resize":(
+        property: resize,
+        class: resize,
+        responsive: true,
+        values: map-merge($resize, (initial: initial))
+    ),
+
+    "transform-style":(
+        property: transform-style,
+        class: transform-style,
+        responsive: true,
+        values:(
+            flat: flat,
+            preserve-3d: preserve-3d,
+        )
+    ),
+
+    "scroll-behavior":(
+        property: scroll-behavior,
+        class: scroll-behavior,
+        values: (
+            auto: auto,
+            smooth: smooth,
+        )
+    ),
+
+    "table-layout":(
+        property: scroll-behavior,
+        class: scroll-behavior,
+        responsive: true,
+        values: (
+            auto: auto,
+            fixed: fixed,
+            initial: initial,
+        )
+    ),
+
+    "unicode-bidi":(
+        property: unicode-bidi,
+        class: unicode-bidi,
+        responsive: true,
+        values: (
+            normal: normal,
+            embed: embed,
+            bidi-override: bidi-override,
+        )
+    ),
+
+    "user-select":(
+        property: user-select,
+        class: user-select,
+        values: map-merge($user-select, (initial: initial))
+    ),
+
+    "vertical-align":(
+        property: vertical-align,
+        class: align,
+        values: (
+            sub: sub,
+            super: super,
+        )
+    ),
+
+    "white-space":(
+        property: white-space,
+        class: space,
+        values: (
+            nowrap: nowrap,
+            normal: normal,
+            pre: pre,
+        )
+    ),
+
+    "word-wrap":(
+        property: word-wrap,
+        class: space,
+        values: (
+            break-word: break-word,
+            normal: normal,
+        )
+    ),
+
+    "writing-mode":(
+        property: writing-mode,
+        class: mode,
+        responsive: true,
+        values: (
+            horizontal-tb: horizontal-tb,
+            vertical-rl: vertical-rl,
+            vertical-lr: vertical-lr,
+        )
+    ),
+
+    "z-index":(
+        property: z-index,
+        class: z-index,
+        responsive: true,
+        values: (
+            horizontal-tb: horizontal-tb,
+            vertical-rl: vertical-rl,
+            vertical-lr: vertical-lr,
+        )
+    ),
+    
+
+//-------------------start:: outline ----------------- //
+    "outline-width":(
+        property: outline-width,
+        class: outline-width,
+        responsive: true,
+        values: map-merge($outline-width,(initial: initial)),
+    ),
+
+    "outline-style":(
+        property: outline-style,
+        class: outline-style,
+        responsive: true,
+        values: map-merge($outline-style,(initial: initial)),
+    ),
+
+    "outline-color":(
+        property: outline-color,
+        class: outline-color,
+        responsive: true,
+        values:(
+            invert: invert,
+            initial: initial,
+        )
+    ),
+
+    "outline-offset":(
+        property: outline-offset,
+        class: outline-offset,
+        responsive: true,
+        values: map-merge($spacers, (auto: auto))
+    ),
+//-------------------end:: outline ----------------- //
+
+//-------------------start:: text ----------------- //
+    "text-indent":(
+        property: text-indent,
+        class: text-indent,
+        responsive: true,
+        values: map-merge($spacers, (auto: auto))
+    ),
+
+    "letter-spacing":(
+        property: letter-spacing,
+        class: letter,
+        responsive: true,
+        values: map-merge($letter, ())
+    ),
+
+    "text-align":(
+        property: text-align,
+        class: text,
+        responsive: true,
+        values:(
+            justify: justify,
+        )
+    ),
+
+    "text-align-last":(
+        property: text-align-last,
+        class: text-last,
+        responsive: true,
+        values:(
+            end: right,
+            justify: justify,
+            center: center
+        )
+    ),
+
+    "text-decoration":(
+        property: text-decoration,
+        class: text-decoration,
+        responsive: true,
+        values:(
+            overline: overline,
+            underline overline: underline overline
+        )
+    ),
+
+    "text-decoration-color":(
+        property: text-decoration-color,
+        class: text-decoration-color,
+        responsive: true,
+        values: map-merge($caret-color, (auto: auto))
+    ),
+
+    "text-decoration-style":(
+        property: text-decoration-style,
+        class: text-decoration-style,
+        responsive: true,
+        values: map-merge($text-decoration-style, (initial: initial))
+    ),
+
+    "text-justify":(
+        property: text-justify,
+        class: text-justify,
+        responsive: true,
+        values: map-merge($text-justify, (initial: initial))
+    ),
+
+    "text-overflow":(
+        property: text-overflow,
+        class: text-overflow,
+        responsive: true,
+        values:(
+            clip: clip,
+            initial: initial
+        )
+    ),
+//-------------------end:: text ----------------- //
+
+//-------------------start:: column ----------------- //
+    "column-count":(
+        property: column-count,
+        class: col-count,
+        responsive: true,
+        values: map-merge($col-count, (initial: initial))
+    ),
+
+    "column-fill":(
+        property: column-fill,
+        class: col-fill,
+        responsive: true,
+        values: (
+            auto: auto,
+            balance: balance,
+        )
+    ),
+
+    "column-rule-color":(
+        property: column-rule-color,
+        class: col-rule-color,
+        responsive: true,
+        values:map-merge($caret-color, (initial: initial))
+    ),
+
+    "column-rule-style":(
+        property: column-rule-style,
+        class:col-rule-style,
+        responsive: true,
+        values:map-merge($col-rule-style, (initial: initial))
+    ),
+
+    "column-rule-width":(
+        property: column-rule-width,
+        class: col-rule-width,
+        responsive: true,
+        values: (
+            medium: medium,
+            thin:thin,
+            thick:thick,
+        )
+    ),
+
+    "column-span":(
+        property: column-span,
+        class: col-span,
+        responsive: true,
+        values: (
+            none: none,
+            all: all,
+            initial: initial
+        )
+    ),
+
+    "column-width":(
+        property: column-width,
+        class: col-width,
+        responsive: true,
+        values: (
+            auto: auto,
+            initial: initial
+        )
+    ),
+
+    "cursor":(
+        property: cursor,
+        class: cursor,
+        values: map-merge($cursor, (initial: initial))
+    ),
+
+//-------------------end:: column ----------------- //
+
+//-------------------start:: table ----------------- //
+    "empty-cells":(
+        property: empty-cells,
+        class: empty-cells,
+        responsive: true,
+        values: (
+            show: show,
+            hide: hide,
+            initial: initial,
+        )
+    ),
+//-------------------end:: table ----------------- //
+
+//-------------------start:: font ----------------- //
+    "font-variant":(
+        property: font-variant,
+        class: fv,
+        responsive: true,
+        values: (
+            normal: normal,
+            small-caps: small-caps,
+            initial: initial,
+        )
+    ),
+
+    "font-variant-caps":(
+        property: font-variant-caps,
+        class: fv-caps,
+        responsive: true,
+        values: map-merge($fv-caps, (initial: initial))
+    ),
+//-------------------end:: font ----------------- //
+
+//-------------------start:: list-style ----------------- //
+   "list-style-image":(
+        property: list-style-image,
+        class: list-style-img,
+        responsive: true,
+        values:(
+            none: none,
+        )
+   ),
+
+   "list-style-position":(
+        property: list-style-position,
+        class: list-style-position,
+        responsive: true,
+        values:(
+            inside: inside,
+            outside: outside,
+            initial: initial,
+        )
+    ),
+
+    "list-style-type":(
+        property: list-style-type,
+        class: list-style-type,
+        values: map-merge($list-style-type, (initial: initial))
+    ),
+//-------------------end:: list-style ----------------- //
+
+//-------------------start:: masking ----------------- //
+    "mask-mode":(
+        property: mask-mode,
+        class: mask-mode,
+        responsive: true,
+        values:(
+            match-source: match-source,
+            luminance: luminance,
+            alpha: alpha,
+        )
+    ),
+
+    "mask-origin":(
+        property: mask-origin,
+        class: mask-origin,
+        responsive: true,
+        values: map-merge($mask-origin, (initial: initial))
+    ),
+
+    "mask-position":(
+        property: mask-position,
+        class: mask-position,
+        responsive: true,
+        values: map-merge($bg-position, (initial: initial))
+    ),
+
+    "mask-repeat":(
+        property: mask-repeat,
+        class: mask-repeat,
+        responsive: true,
+        values: map-merge($mask-repeat, (initial: initial))
+    ),
+
+    "mix-blend-mode":(
+        property: mix-blend-mode,
+        class: mix-blend-mode,
+        responsive: true,
+        values: map-merge($mix-blend-mode, ())
+    ),
+//-------------------end:: masking ----------------- //
+
+//-------------------start:: overflow ----------------- //
+
+    "overflow-wrap":(
+        property: overflow-wrap,
+        class: overflow-wrap,
+        responsive: true,
+        values:(
+            normal: normal,            
+            anywhere: anywhere,
+            break-word: break-word
+        )
+    ),
+
+    "overflow-x":(
+        property: overflow-x,
+        class:overflow-x,
+        responsive: true,
+        values: map-merge($overflow, (initial: initial))
+    ),
+
+    "overflow-y":(
+        property: overflow-y,
+        class:overflow-y,
+        responsive: true,
+        values: map-merge($overflow, (initial: initial))
+    ),
+
+
+//-------------------end:: masking ----------------- //
+
+
+//-------------------start:: transition ----------------- //
+    "transition-delay":(
+        property: transition-delay,
+        class: transition-delay,
+        responsive: true,
+        values: map-merge($ani-transition-delay, (initial: initial))
+    ),
+
+    "transition-duration":(
+        property: transition-duration,
+        class: transition-duration,
+        responsive: true,
+        values: map-merge($ani-transition-duration, (initial: initial))
+    ),
+
+    "transition-property":(
+        property: transition-property,
+        class:transition-property,
+        responsive: true,
+        values: map-merge($transition-property, (initial: initial))
+    ),
+
+    "transition-timing-function":(
+        property: transition-timing-function,
+        class:transition-timing-function,
+        responsive: true,
+        values: map-merge($timing-function, (initial: initial))
+    ),
+//-------------------end:: transition ----------------- //
+)
+
+

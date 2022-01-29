@@ -1,0 +1,470 @@
+$num_0px: 0px;
+$num_1px: 1px;
+$num_2px: 2px;
+$num_3px: 3px;
+$num_4px: 4px;
+$num_5px: 5px;
+
+$num_0: 0;
+$num_1: 1;
+$num_2: 2;
+$num_3: 3;
+$num_4: 4;
+$num_5: 5;
+
+$none: none;
+$hidden: hidden;
+$dotted: dotted;
+$dashed: dashed;
+$solid: solid;
+$double: double;
+$groove: groove;
+$ridge: ridge;
+$inset: inset;
+$outset: outset;
+$dotted-solid-double-dashed: dotted solid double dashed;
+$dotted-solid: dotted solid;
+
+$border-box: border-box;
+$padding-box: padding-box;
+$content-box: content-box;
+$margin-box: margin-box;
+$fill-box: fill-box;
+$stroke-box: stroke-box;
+$view-box: view-box;
+
+$top: top;
+$left: left;
+$right: right;
+$left: left;
+$bottom: bottom;
+$left-top: left top;
+$left-center: left center;
+$left-bottom: left bottom;
+$right-top: right top;
+$right-center: right center;
+$right-bottom: right bottom;
+$center-top:  center top;
+$center-center: center center;
+$center-bottom: center bottom;
+
+
+$normal: normal;
+$multiply: multiply;
+$screen: screen;
+$overlay: overlay;
+$darken: darken;
+$lighten: lighten;
+$color-dodge: color-dodge;
+$color-burn: color-burn;
+$difference: difference;
+$exclusion: exclusion;
+$hue: hue;
+$saturation: saturation;
+$color: color;
+$luminosity: luminosity;
+
+$scroll: scroll;
+$visible:  visible;
+$hidden:  hidden;
+$scroll:  scroll;
+$auto:  auto;
+
+
+// ----- animation ------ //
+$ani_d_0s: 0s;
+$ani_d_1s: 1s;
+$ani_d_2s: 2s;
+$ani_d_3s: 3s;
+$ani_d_4s: 4s;
+$ani_d_5s: 5s;
+
+$ani-transition-delay:(
+  0: $ani_d_0s,
+  1: $ani_d_1s,
+  2: $ani_d_2s,
+  3: $ani_d_3s,
+  4: $ani_d_4s,
+  5: $ani_d_5s,
+  -1: -1s,
+  -2: -2s,
+  -3: -3s,
+  -4: -4s,
+  -5: -5s,
+);
+
+$ani-direction:(
+  normal: normal,
+  reverse: reverse,
+  alternate: alternate,
+  alternate-reverse: alternate-reverse
+);
+
+$ani-transition-duration:(
+  0: $ani_d_0s,
+  1: $ani_d_1s,
+  2: $ani_d_2s,
+  3: $ani_d_3s,
+  4: $ani_d_4s,
+  5: $ani_d_5s,
+  1ms: 1ms,
+  2ms: 2ms,
+  3ms: 3ms,
+  4ms: 4ms,
+  5ms: 5ms,
+);
+
+$ani-fill-mode :(
+  none: none,
+  forwards: forwards,
+  backwards: backwards,
+  both: both
+);
+
+$ani-iteration-count:(
+  0: $num_0,
+  1: $num_1,
+  2: $num_2,
+  3: $num_3,
+  4: $num_4,
+  5: $num_5,
+);
+
+$timing-function:(
+  linear: linear,
+  ease: ease,
+  ease-in: ease-in,
+  ease-out: ease-out,
+  ease-in-out: ease-in-out
+);
+
+// ----- background ------ //
+
+$bg-clip-origin:(
+  border-box: $border-box,
+  padding-box: $padding-box,
+  content-box: $content-box,
+);
+
+$bg-position:(
+  left-top: $left-top,
+  left-center: $left-center,
+  left-bottom: $left-bottom,
+  right-top: $right-top,
+  right-center: $right-center,
+  right-bottom: $right-bottom,
+  center-top: $center-top,
+  center-center: $center-center,
+  center-bottom: $center-bottom,
+);
+
+$bg-size:(
+  auto: auto,
+  cover: cover,
+  contain: contain,
+);
+
+$bg-blend-mode:(
+  normal: $normal,
+  multiply: $multiply,
+  screen: $screen,
+  overlay: $overlay,
+  darken: $darken,
+  lighten: $lighten,
+  color-dodge: $color-dodge,
+  saturation: $saturation,
+  color: $color,
+  luminosity: $luminosity
+);
+
+// ----- border ------ //
+
+$border-style:(
+  none: $none,
+  hidden: $hidden,
+  dashed: $dashed,
+  solid: $solid,
+  double: $double,
+  groove: $groove,
+  ridge: $ridge,
+  inset: $inset,
+  outset: $outset,
+  dotted-solid-double-dashed: $dotted-solid-double-dashed,
+  dotted-solid: $dotted-solid,
+);
+
+$border-image-repeat:(
+  stretch: stretch,
+  repeat: repeat,
+  round: round,
+  space: space,
+);
+
+// ----- outline ------ //
+
+$outline-width:(
+  medium: medium,
+  thin: thin,
+  thick: thick,
+  1: $num_1px,
+  2: $num_2px,
+  3: $num_3px,
+  4: $num_4px,
+  5: $num_5px,
+);
+
+$outline-style:(
+  none: $none,
+  hidden: $hidden,
+  dashed: $dashed,
+  solid: $solid,
+  double: $double,
+  groove: $groove,
+  ridge: $ridge,
+  inset: $inset,
+  outset: $outset,
+  dotted-solid-double-dashed: $dotted-solid-double-dashed,
+  dotted-solid: $dotted-solid,
+);
+
+// ----- text ------ //
+$letter:(
+  0: $num_0px,
+  1: $num_1px,
+  2: $num_2px,
+  3: $num_3px,
+  4: $num_4px,
+  5: $num_5px,
+);
+
+$text-decoration-style:(
+  solid:  solid,
+  double:  double,
+  dotted:  dotted,
+  dashed:  dashed,
+  wavy:  wavy,
+);
+
+$text-justify:(
+  auto:  auto,
+  inter-word:  inter-word,
+  inter-character:  inter-character,
+  none:  none,
+);
+
+// ----- clear ------ //
+$clear:(
+  none: none,
+  left: left,
+  right: right,
+  both: both
+);
+
+// ----- column ------ //
+$col-count:(
+  1: $num_1,
+  2: $num_2,
+  3: $num_3,
+  4: $num_4,
+  5: $num_5,
+  auto: auto,
+);
+
+$col-rule-style:(
+  none: $none,
+  hidden: $hidden,
+  dotted: $dotted,
+  dashed: $dashed,
+  solid: $solid,
+  double: $double,
+  groove: $groove,
+  ridge: $ridge,
+  inset: $inset,
+  outset: $outset,
+);
+
+$cursor: (
+  alias: alias,
+  all-scroll: all-scroll,
+  auto: auto,
+  cell: cell,
+  context-menu: context-menu,
+  col-resize: col-resize,
+  copy: copy,
+  crosshair: crosshair,
+  default: default,
+  e-resize: e-resize,
+  ew-resize: ew-resize,
+  grab: grab,
+  grabbing: grabbing,
+  help: help,
+  move: move,
+  n-resize: n-resize,
+  ne-resize: ne-resize,
+  nesw-resize: nesw-resize,
+  ns-resize: ns-resize,
+  nw-resize: nw-resize,
+  nwse-resize: nwse-resize,
+  no-drop: no-drop,
+  none: none,
+  not-allowed: not-allowed,
+  pointer: pointer,
+  progress: progress,
+  row-resize: row-resize,
+  s-resize: s-resize,
+  se-resize: se-resize,
+  sw-resize: sw-resize,
+  text: text,
+  vertical-text: vertical-text,
+  w-resize: w-resize,
+  wait: wait,
+  zoom-in: zoom-in,
+  zoom-out: zoom-out,
+);
+
+// ----- font ------ //
+$fv-caps:(
+  normal: normal,
+  small-caps: small-caps,
+  all-small-caps: all-small-caps,
+  petite-caps: petite-caps,
+  all-petite-caps: all-petite-caps,
+  unicase: unicase,
+  titling-caps: titling-caps,
+);
+
+// ----- img ------ //
+
+$img-rendering:(
+  auto: auto,
+  smooth: smooth,
+  high-quality: high-quality,
+  crisp-edges: crisp-edges,
+  pixelated: pixelated,
+);
+
+// ----- list-style ------ //
+$list-style-type:(
+  disc: disc,
+  circle: circle,
+  none: none,
+  square: square,
+  armenian: armenian,
+  cjk-ideographic: cjk-ideographic,
+  decimal: decimal,
+  decimal-leading-zero: decimal-leading-zero,
+  georgian: georgian,
+  hebrew: hebrew,
+  hiragana: hiragana,
+  hiragana-iroha: hiragana-iroha,
+  katakana: katakana,
+  katakana-iroha: katakana-iroha,
+  lower-alpha: lower-alpha,
+  lower-greek: lower-greek,
+  lower-latin: lower-latin,
+  lower-roman: lower-roman,
+  upper-alpha: upper-alpha,
+  upper-greek: upper-greek,
+  upper-latin: upper-latin,
+  upper-roman: upper-roman,
+);
+
+// ----- masking ------ //
+
+$mask-origin:(
+  border-box: $border-box,
+  padding-box: $padding-box,
+  content-box: $content-box,
+  margin-box: $margin-box,
+  fill-box: $fill-box,
+  stroke-box: $stroke-box,
+  view-box: $view-box,
+);
+
+$mask-repeat:(
+  repeat: repeat,
+  repeat-x: repeat-x,
+  repeat-y: repeat-y,
+  space: space,
+  round: round,
+  no-repeat: no-repeat,
+);
+
+$mix-blend-mode:(
+  normal: $normal,
+  multiply: $multiply,
+  screen: $screen,
+  overlay: $overlay,
+  darken: $darken,
+  lighten: $lighten,
+  color-dodge: $color-dodge,
+  color-burn: $color-burn,
+  difference: $difference,
+  exclusion: $exclusion,
+  hue: $hue,
+  saturation: $saturation,
+  color: $color,
+  luminosity: $luminosity
+);
+
+// ----- object-fit ------ //
+
+$object-fit:(
+  fill: fill,
+  contain: contain,
+  cover: cover,
+  none: none,
+  scale-down: scale-down,
+);
+
+// ----- overflow ------ //
+
+$overflow:(
+  visible:  $visible,
+  hidden:  $hidden,
+  scroll:  $scroll,
+  auto:  $auto,
+);
+
+// ----- perspective-origin ------ //
+
+$perspective-origin:(
+  left: $left,
+  right: $right,
+  top: $top,
+  bottom: $bottom,
+  left-top: $left-top,
+  left-center: $left-center,
+  left-bottom: $left-bottom,
+  right-top: $right-top,
+  right-center: $right-center,
+  right-bottom: $right-bottom,
+  center-top: $center-top,
+  center-center: $center-center,
+  center-bottom: $center-bottom,
+);
+
+// ----- resize ------ //
+$resize:(
+  both:  both,
+  horizontal:  horizontal,
+  vertical:  vertical,
+  none:  none,
+);
+
+// ----- transition ------ //
+$transition-property:(
+    none: $none,
+    width: width,
+    height: height,
+    width-height: width height,
+);
+
+// ----- user-select ------ //
+
+$user-select:(
+  auto:  auto,
+  none:  none,
+  text:  text,
+  all:  all
+)
